@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome!</title>
   <style>
     html, body {
       margin: 0;
@@ -10,38 +10,58 @@
       width: 100%;
       height: 100%;
       display: none; /* initially hide page for password */
+      background-color: lightblue;
+      text-align: center;
+      font-family: Arial, sans-serif;
     }
     .container {
       width: 100%;
       height: 100vh;
     }
-<style>
-let password = prompt("please Enter password :");
-if(password !== "Sir123"){
-  alert("Wrong password! Closing page.");
-  window.close();
-}
-</script>
-<title>welcome!</title>
-</head>
-<body style="background-color:lightblue;text-align:center">
-<style>
-p {
-  font-size: 24px;
-}
-</style>
-<center>
-<h2>Abhinaw Raj Dubey</h2>
-<img src="pednam.jpeg" width="100">
-<h1>Welcome! to my website</h1>
-<p>Pednam sir</p>
-<p>sir today is teachers day this is for you</p>
-<a href="page2.html">
-<button style="font-size:50px; background-color:blue ;color:yellow">so let's start</button>
-</a>
-</body>
+    p {
+      font-size: 24px;
+    }
+    button {
+      font-size: 50px;
+      background-color: blue;
+      color: yellow;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    window.onload = function() {
+      let password = prompt("Please enter password:");
+      if(password === "Sir123"){
+        alert("Welcome!");
+        document.body.style.display = "block"; // Show page
+      } else {
+        alert("Wrong password! Closing page.");
+        document.body.style.display = "none";
+        // window.close(); // Note: may not work on all browsers
+      }
 
+      // Mobile full screen fix
+      document.querySelector('.container').style.height = window.innerHeight + "px";
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h2>Abhinaw Raj Dubey</h2>
+    <img src="pednam.jpeg" width="100">
+    <h1>Welcome! to my website</h1>
+    <p>Pednam sir</p>
+    <p>Sir, today is Teachers' Day. This is for you!</p>
+    <a href="page2.html">
+      <button>So let's start</button>
+    </a>
+  </div>
+</body>
 </html>
+
+
 
 
 
