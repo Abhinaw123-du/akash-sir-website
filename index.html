@@ -1,6 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <style>
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh; /* full screen height */
+  }
+
+  .container {
+    width: 100%;
+    height: 100vh; /* full screen height */
+  }
+</style>
+  <script>
+let password = prompt("please Enter password :");
+if(password !== "Sir123"){
+  alert("Wrong password! Closing page.");
+  window.close();
+}
+</script>
 <title>welcome!</title>
 </head>
 <body style="background-color:lightblue;text-align:center">
@@ -19,4 +39,5 @@ p {
 <button style="font-size:50px; background-color:blue ;color:yellow">so let's start</button>
 </a>
 </body>
+
 </html>
