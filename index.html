@@ -9,7 +9,6 @@
       padding: 0;
       width: 100%;
       height: 100%;
-      display: none; /* initially hide page for password */
       background-color: lightblue;
       text-align: center;
       font-family: Arial, sans-serif;
@@ -31,19 +30,12 @@
     }
   </style>
   <script>
-    window.onload = function() {
-      let password = prompt("Please enter password:");
-      if(password === "Sir123"){
-        alert("Welcome!");
-        document.body.style.display = "block"; // Show page
-      } else {
-        alert("Wrong password! Closing page.");
-        document.body.style.display = "none";
-        // window.close(); // Note: may not work on all browsers
-      }
-
-      // Mobile full screen fix
-      document.querySelector('.container').style.height = window.innerHeight + "px";
+    // Prompt page load se turant pehle
+    let password = prompt("Please enter password:");
+    if(password !== "Sir123"){
+      alert("Wrong password! Closing page.");
+      document.write("<h1>Access Denied</h1>");
+      throw "Access Denied"; // Stop further page load
     }
   </script>
 </head>
@@ -60,6 +52,8 @@
   </div>
 </body>
 </html>
+
+
 
 
 
