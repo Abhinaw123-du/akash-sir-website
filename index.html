@@ -16,6 +16,7 @@
     .container {
       width: 100%;
       height: 100vh;
+      display: none; /* initially hidden */
     }
     p {
       font-size: 24px;
@@ -30,12 +31,15 @@
     }
   </style>
   <script>
-    // Prompt page load se turant pehle
-    let password = prompt("Please enter password:");
-    if(password !== "Sir123"){
-      alert("Wrong password! Closing page.");
-      document.write("<h1>Access Denied</h1>");
-      throw "Access Denied"; // Stop further page load
+    window.onload = function() {
+      let password = prompt("Please enter password:");
+      if(password === "Sir123"){
+        alert("Welcome!");
+        document.querySelector('.container').style.display = "block"; // Show content
+      } else {
+        alert("Wrong password! Access denied.");
+        // Page ka content kabhi show nahi hoga
+      }
     }
   </script>
 </head>
@@ -52,6 +56,8 @@
   </div>
 </body>
 </html>
+
+
 
 
 
