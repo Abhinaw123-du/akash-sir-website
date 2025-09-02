@@ -2,19 +2,24 @@
 <html>
 <head>
   <style>
-  body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    min-height: 100vh; /* full screen height */
-  }
-
-  .container {
-    width: 100%;
-    height: 100vh; /* full screen height */
-  }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      display: none; /* initially hide page for password */
+    }
+    .container {
+      width: 100%;
+      height: 100vh;
+    }
 </style>
   <script>
+    window.onload = function() {
+      // Set container height for mobile full screen
+      document.querySelector('.container').style.height = window.innerHeight + "px";
 let password = prompt("please Enter password :");
 if(password !== "Sir123"){
   alert("Wrong password! Closing page.");
@@ -41,3 +46,4 @@ p {
 </body>
 
 </html>
+
